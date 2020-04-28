@@ -5,16 +5,111 @@
         .hide {
             display: none;
         }
+
+        div {
+            background-color: none;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            font-size-adjust: inherit;
+            font-kerning: auto;
+            font-stretch: extra-expanded;
+            display: inline-block;
+            margin-right: auto;
+            opacity: 1;
+            border-radius: 3px;
+        }
+
+        button {
+            background : yellowgreen;
+            border: none;
+            border-radius: 10%;
+            color: white;
+            width: 90px;
+            height: 90px;
+            text-align: center;
+        }
+
+        .col-xs-3 {
+            background: yellow;
+            background-clip:content-box;
+            color: rgb(219, 76, 100);
+            font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+            margin: 0; 
+            padding: 0;
+            border-color: black;
+            border-width:thick;
+            border-radius: 10%;
+            width: 90px;
+            height: 60px;
+            text-align: center;
+        }
+
+        .panel-heading {
+            background: none;
+            color: rgb(219, 76, 100);
+            font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+            margin: 0; 
+            padding: 0;
+        }
+
+        .panel-body {
+            background: blueviolet;
+            color: rgb(219, 76, 100);
+            font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+            margin: 0; 
+            padding: 0;
+        }
     </style>
     <body>
-        <main>
-        <div>
+        <div class="container">
             <ul>
-                <li>images</li>
-                <li>scripts</li>
+            <div class="jumbotron">
+                <h1>Let's have fun!</h1>
+            </div></br>
+            <button class=panel-button data-panelid="panel1">#btn1</button>
+            <button class=panel-button data-panelid="panel2">#btn2</button>
+            <button class=panel-button data-panelid="panel3">#btn3</button>
+            <button class=panel-button data-panelid="panel4">#btn4</button>
             </ul>
-        </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <div id="panel1" class="panel panel-primary">
+                        <div class="panel-heading">
+                            #panel1
+                        </div></br>
+                        <div class="panel-body">content</div>
+                    </div>
+                </div>
 
+                <div class="col-xs-3">
+                    <div id="panel2" class="panel panel-primary">
+                        <div class="panel-heading">
+                            #panel2
+                        </div></br>
+                        <div class="panel-body">content</div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3">
+                    <div id="panel3" class="panel panel-primary">
+                        <div class="panel-heading">
+                            #panel3
+                        </div></br>
+                        <div class="panel-body">content</div>
+                    </div>
+                </div>
+
+                <div class="col-xs-3">
+                    <div id="panel4" class="panel panel-primary">
+                        <div class="panel-heading">
+                            #panel4
+                        </div></br>
+                        <div class="panel-body">content</div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <module-one id="module-one">
             <ul>
                 <li><a data-image="item1" id="Italy1" href="#">Italy1</a></li>
@@ -26,7 +121,20 @@
             <img class="hide" id="item3" src="images/Italy3.png">
         </module-one>
         <module-two id="module-two">we awesome day</module-two>
-        </main>
         <script src="scripts/javascript/GoThroughIndex.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+
+                var content = "My new awesome content";
+
+                $('.panel-button').on('click', function() {
+                    var panelId = $(this).attr("data-panelid");
+                    $('#' + panelId).toggle();
+                    $('#' + panelId + " .panel-body").html(content);
+                });
+                
+            });
+        </script>
     </body>
 </html>
