@@ -1,0 +1,173 @@
+/* HEADER */
+header {
+    background-color: black;
+    background-image: url("images/Italy5.jpg");
+    background-size: 100%;
+    background-repeat: none;
+    padding: 20px;
+    height: 400px;
+    background-color: black;
+    text-align: center;
+}
+
+header a {
+    background-color: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 90px;
+}
+
+header .logo a {
+    background-color: none;
+    background-image: url("images/Italy6.jpg"), url("images/Italy7.jpg");
+    background-size: cover;
+    background-blend-mode: luminosity;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 180px;
+    position: relative;
+    text-indent: -9999999999px;
+    top: -50px;
+    width: 300px;
+}
+
+section.feature-box.closeouts div {
+    background-image: url("images/Italy2.png"), url("images/Italy3.png");
+    background-size: cover;
+    background-blend-mode: soft-light;
+    color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*section.feature-box.sales div{
+    background: rgb(69, 226, 30);
+    color: rgb(27, 23, 23);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}*/
+div {
+    background: red;
+    width: auto;
+    height: 100px;
+}
+
+div .food {
+    background-size: 100%;
+    background-repeat: none;
+    flex-direction: column;
+    padding: 20px;
+    height: 40px;
+}
+
+body {
+    background: rgb(228, 191, 191);
+    color: rgb(219, 76, 100);
+    font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+    margin: 0; 
+    padding: 0;
+}
+h1 {
+    color: yellowgreen;
+    padding: 20px;
+}
+li {
+    background-color: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    font-size-adjust: inherit;
+    font-kerning: auto;
+    font-stretch: extra-expanded;
+    display: inline-block;
+    margin-right: auto;
+    opacity: 1;
+    padding: 40px;
+    border-radius: 3px;
+}
+
+li input {
+    display: none;
+}
+
+li.edit span {
+    display: none;
+}
+
+li.edit input {
+    display: initial;
+}
+
+li:first-child {
+    margin-left: 0;
+}
+
+li:hover {
+    background: burlywood;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background : yellowgreen;
+    border: none;
+    border-radius: 10%;
+    color: white;
+    width: 90px;
+    height: 90px;
+}
+
+/* FEATURES */
+.features {
+    background: white;
+    color: gray;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.features figure {
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    width: 200px;
+}
+
+.features figure img {
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: gray 0px 0px 10px;
+    width: 200px;
+}
+
+footer {
+    background: black;
+    color: gray;
+    font-size: 12px;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+@media screen and (min-width: 400px) {
+    .features {
+        background: pink;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .features {
+        background: purple;
+    }
+}
+
+.hide {
+    display: none;
+}
