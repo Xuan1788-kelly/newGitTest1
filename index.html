@@ -1,10 +1,32 @@
+<!DOCTYPE html>
 <html>
+    <!-- <link rel="stylesheet" href="scripts/css/styles.css"> -->
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
     <body>
+        <main>
         <div>
             <ul>
-                <li>bricks</li>
-                <li>mortar</li>
+                <li>images</li>
+                <li>scripts</li>
             </ul>
         </div>
+
+        <module-one id="module-one">
+            <ul>
+                <li><a data-image="item1" id="Italy1" href="#">Italy1</a></li>
+                <li><a data-image="item2" id="Italy2" href="#">Italy2</a></li>
+                <li><a data-image="item3" id="Italy3" href="#">Italy3</a></li>
+            </ul>
+            <img class="hide" id="item1" src="images/Italy1.jpg">
+            <img class="hide" id="item2" src="images/Italy2.png">
+            <img class="hide" id="item3" src="images/Italy3.png">
+        </module-one>
+        <module-two id="module-two">we awesome day</module-two>
+        </main>
+        <script src="scripts/javascript/GoThroughIndex.js"></script>
     </body>
 </html>
