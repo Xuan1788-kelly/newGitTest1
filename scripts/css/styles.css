@@ -1,12 +1,11 @@
 /* HEADER */
 header {
-    background-color: black;
+    background-color: plum;
     background-image: url("images/Italy5.jpg");
     background-size: 100%;
     background-repeat: none;
     padding: 20px;
     height: 400px;
-    background-color: black;
     text-align: center;
 }
 
