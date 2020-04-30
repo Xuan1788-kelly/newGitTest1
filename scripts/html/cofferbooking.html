@@ -1,8 +1,77 @@
 <!DOCTYPE html>
 <html>
+    <style>
+        div {
+            background: red;
+            width: auto;
+            height: 100px;
+        }
+
+        div .food {
+            background-size: 100%;
+            background-repeat: none;
+            flex-direction: column;
+            padding: 20px;
+            height: 40px;
+        }
+
+        body {
+            background: rgb(228, 191, 191);
+            color: rgb(219, 76, 100);
+            font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+            margin: 0; 
+            padding: 0;
+        }
+        h1 {
+            color: yellowgreen;
+            padding: 20px;
+        }
+        li {
+            background-color: #c9c9c9;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            font-size-adjust: inherit;
+            font-kerning: auto;
+            font-stretch: extra-expanded;
+            display: inline-block;
+            opacity: 1;
+            padding: 40px;
+        }
+
+        li input {
+            display: none;
+        }
+
+        li.edit span {
+            display: none;
+        }
+
+        li.edit input {
+            display: initial;
+        }
+
+        li:first-child {
+            margin-left: 0;
+        }
+
+        li:hover {
+            background: burlywood;
+        }
+
+        button {
+            background : yellowgreen;
+            border: none;
+            border-radius: 10%;
+            color: white;
+            width: 90px;
+            height: 90px;
+            text-align: center;
+        }
+    </style>
     <head>
         <title>JQuery Ajax tutorial</title>
-        <link rel='stylesheet' href="../css/styles.css">
+        <!-- <link rel='stylesheet' href="../css/styles.css"> -->
     </head>
     <body>
         <h1>Coffee Booking Now!</h1>
@@ -13,10 +82,18 @@
         <h4>Add a Coffee Order</h4>
         <p>name: <input type="text" id="name"></p>
         <p>drink: <input type="text" id="drink"></p>
-        <button id="add-orders">Add!</button>
+        <h3 id="test">请点击下面的按钮，通过 jQuery AJAX 改变这段文本。</h3>
+        <button id="add-orders" type="button">Add!</button>
 
-        <script src="../../../jquery.js"></script>
-        <script src="../../api/order.js"></script>l
+        <script src="../../../../jquery.js"></script>
         <script src="../javascript/CoffeeOrder.js"></script>
-    </body>
+        <!-- <script>
+            $(function() {
+                $("#add-orders").on('click', function() {
+                    // alert("waiting for your orders");
+                    $("#test").load('http://127.0.0.1:5500/git_first_try/newGitTest1/api/orders.txt');
+                })
+            })
+        </script>
+    </body> -->
 </html>
