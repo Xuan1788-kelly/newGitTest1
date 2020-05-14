@@ -34,22 +34,24 @@
         </nav>
     </head>
     <body>
-        <h1>Coffee Booking Now!</h1>
+        <header>
+            <h1>Coffee Booking Now!</h1>
+        </header>
         <section>
-            <div class="order"> 
+            <p class="order"> 
                 <h2>Add a Coffee Order</h2>
+                <ul id="orders"></ul>
                 <form>
                     name: <input type="text" id="username" placeholder="guest name" autofocus/>
                 </form>
-            </div>
+            </p>
             <p>
                 <form aria-autocomplete="false">
                     drink: <input type="text" id="drink" placeholder="wonderful drink" required/>
-                    <input type="submit" />
+                    <input id="add-orders" type="submit" />
                 </form>
             </p>
             <!-- <button id="add-orders" type="button">Add!</button> -->
-            <ul id="orders"></ul>
         </section>
         
         <h3 id="test">Menu: <input type="search" name="searchitem" /></h3>
