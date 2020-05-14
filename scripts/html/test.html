@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="firstCanvas" width="333" height="333"></canvas>
+
+<script>
+    var tx=document.getElementById("firstCanvas");
+    var my_context=tx.getContext("2d");
+    my_context.font="bold 20px Arial";
+    my_context.translate(100,100);
+    my_context.fillText("Welcome to FishC", 33, 33);
+</script>
+<canvas id="secondCanvas" width="333" height="333"></canvas>
+
+<script>
+    var tx=document.getElementById("secondCanvas");
+    var ctx=tx.getContext("2d");
+    var cw=80;
+    var ch=80;
+    ctx.fillStyle = "#faa";
+    ctx.translate(cw, ch);
+    ctx.fillRect(10,50, cw, ch);
+
+    ctx.rotate( (Math.PI / 180) * 30);  //旋转30度
+
+    ctx.fillStyle = "#afa";
+    ctx.translate(cw, ch);
+    ctx.fillRect(10,10, cw, ch);
+
+    ctx.fillStyle = "#fae";
+    ctx.translate(-cw, ch);
+    ctx.fillRect(-10,-40, cw, ch);
+
+    ctx.rotate( (Math.PI / 180) * 75);  //旋转30度
+
+    ctx.fillStyle = "#afe";
+    ctx.translate(-ch, -cw);
+    ctx.fillRect(-60,10, cw, ch);
+
+    ctx.strokeRect(5,5,25,15);
+    ctx.scale(2,2);
+    ctx.strokeRect(5,5,25,15);
+    ctx.scale(2,2);
+    ctx.strokeRect(5,5,25,15);
+    ctx.scale(2,2);
+    ctx.strokeRect(5,5,25,15);
+</script>
+<canvas id="thirdCanvas" width="333" height="333"></canvas>
+
+<script>
+    var tx=document.getElementById("firstCanvas");
+    var ctx=tx.getContext("2d");
+    var x= 50;
+    var y= 50;
+    var r= 50;
+    var x1= 80;
+    var y1= 50;
+    var r1= 50;
+    ctx.moveTo(x,y);
+    ctx.lineTo(x1,y1);
+    ctx.arc(x,y,r,start,stop);
+    ctx.createLinearGradient(x,y,x1,y1); // 创建线条渐变
+    ctx.createRadialGradient(x,y,r,x1,y1,r1); // 创建一个径向/圆渐变
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鱼C-svg</title>
+</head>
+<body>
+<svg width="1000" height="1000">
+    <circle cx="333" cy="333" r="100" fill="#faf"></circle>
+</svg>
+<svg width="1000" height="1000">
+    <rect width="100" height="100" x="111" y="333" fill="red"></rect>
+ </svg>
+ <svg width="500" height="250">
+    <ellipse cx="200" cy="100" rx="150" ry="70" style="fill:red" />
+</svg>
+<svg width="1000" height="1000">
+    <polygon points="100 100, 200 200, 300 0" 
+          style="fill: red; stroke:black;" />
+</svg>
+<svg width="1000" height="250">
+    <rect width="150" height="150" fill="orange">
+      <animate attributeName="y" from="0" to="300"
+        dur="3s" fill="remove" repeatCount="indefinite"/> 
+    </rect>
+</svg>
+<svg width="500" height="500">
+    <path d="M150 10 L75 200 L225 150 Z" />
+</svg>
+<progress value="30" max="100"></progress>
+</body>
+</html>
