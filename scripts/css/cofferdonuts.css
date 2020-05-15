@@ -1,5 +1,5 @@
 /* HEADER */
-div {
+/* div {
     background: none;
     width: auto;
     height: 100px;
@@ -11,25 +11,55 @@ div .food {
     flex-direction: column;
     padding: 20px;
     height: 40px;
-}
+} */
 
 body {
-    background: rgb(228, 191, 191);
-    font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
-    margin: 0; 
-    padding: 0;
+    margin-top: 0;
+    height: 200vh;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#7996fc), color-stop(#cc86e4), color-stop(#fb7cba), color-stop(#ff828b), color-stop(#ff9764), color-stop(#ff9d52), color-stop(#ffa43d), color-stop(#ffad21), color-stop(#ff9a1e), color-stop(#ff8620), color-stop(#ff7026), to(#ff592e));
+    background-image: linear-gradient(to bottom, #7996fc, #cc86e4, #fb7cba, #ff828b, #ff9764, #ff9d52, #ffa43d, #ffad21, #ff9a1e, #ff8620, #ff7026, #ff592e);
+    -webkit-transition-duration: 3s;
+    transition-duration: 10s;
+}
+
+#sun {
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 50%;
+    background: #FFCD47;
+    box-shadow: none;
+    -webkit-transition-duration: 3s;
+    transition-duration: 3s;
+    cursor: pointer;
 }
 
 header {
     width:2500px;
-    height:50px;
+    height:100px;
     color:white;
-    background-color:green;
+    opacity: 0.6;
+    /* filter:alpha(opacity=60); to be compatible with ie*/
     transform: translateX(0px)
     translateY(2em)
     translateZ(-13px);
     color: yellowgreen;
     padding: 20px;
+    animation-name: air;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    /*慢启动的动画，然后快速，然后慢慢结束*/
+    animation-timing-function: ease;
+    /*定义动画开始之前延迟2s*/
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes air {
+    from { background-image: linear-gradient(to bottom right, #7996fc, #cc86e4, #fb7cba, #ff828b, #ff9764, #ff9d52, #ffa43d, #ffad21, #ff9a1e, #ff8620, #ff7026, #ff592e); }
+    to { background-image: linear-gradient(to bottom left, #ff9764, #ff9d52, #ffa43d, #ffad21, #ff9a1e, #ff8620, #ff7026, #ff592e, #7996fc, #cc86e4, #fb7cba, #ff828b); }
 }
 
 h2 {
@@ -37,8 +67,23 @@ h2 {
     padding: 20px;
 }
 
+h1 {
+    transform: scale(0.7, 0.7);
+    animation-name: fishcs;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    /*慢启动的动画，然后快速，然后慢慢结束*/
+    animation-timing-function: ease;
+    /*定义动画开始之前延迟2s*/
+    animation-fill-mode: both;
+}
+
+@keyframes fishcs {
+    from { width: 0px; }
+    to { width: 5000px; }
+}
+
 section {
-    background-color: green;
     padding: 20px;
 }
 
@@ -51,7 +96,6 @@ audio {
 }
 
 li {
-    background-color: #c9c9;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 22px;
     font-weight: bold;
@@ -63,6 +107,26 @@ li {
     padding: 40px;
 }
 
+#order_list {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-size-adjust: inherit;
+    font-kerning: auto;
+    font-stretch: extra-expanded;
+    display: inline-block;
+    opacity: 1;
+    padding: 40px;
+    transition:height 2s;
+    /*-moz-transition:height 2s; /* Firefox */
+    /*-webkit-transition:height 2s; /* Safari and Chrome */
+    /*-o-transition:height 2s; /* Opera */
+}
+
+#order_list:hover
+{
+    height:300px;
+}
 li input {
     display: none;
 }
@@ -93,7 +157,7 @@ button {
     text-align: center;
 }
 
-#orders .first {
+/* #orders .first {
     position: relative;
     height: 200px;
     width: 200px;
@@ -108,7 +172,7 @@ button {
     background-color: red;
     border: 1px solid white;
     transform: rotateX(45deg);
-}
+} */
 
 #slider {
     width: auto;
@@ -125,7 +189,6 @@ button {
 }
 
 #slider .slide {
-    background-color: none;
     float: left;
     list-style-type: none;
     width: 720px;

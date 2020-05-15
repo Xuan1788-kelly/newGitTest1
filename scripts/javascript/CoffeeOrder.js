@@ -9,7 +9,7 @@ $(function (){
         success: function(orders) {
             $.each(orders, function(i, order) {
                 var j = i + 1;
-                $orders.append('<li>order num ' +  j + '</li>');
+                $orders.append('<li id="order_list">order num ' +  j + '</li>');
                 $orders.append('<li>name: ' + order.name + ', drink: ' + order.drink + '</li>');
             });
         },

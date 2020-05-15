@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>鱼C出品</title>
+    <style>
+        body{
+
+            text-align: center;
+        }
+
+        #c1{
+
+            background-color: lightgray;
+            animation:colorChange 3s infinite;
+        }
+
+        @keyframes colorChange {
+            from  {background-color: red;}
+            50%  {background-color: yellow;}
+            70%  {background-color: blue;}
+            to {background-color: green;}
+        }
+    </style>
+</head>
+<body>
+<canvas id="c1" width="666" height="666"></canvas>
+<script>
+
+    //通过getContext（）方法获取上下文
+    var ctx = c1.getContext("2d");
+
+    //加载图片
+    var p1 = new Image();
+    p1.src = "../../images/shenshou.png";
+
+    p1.onload = function(){
+
+
+
+        var x = 0;
+        var y = 0;
+
+        //监听鼠标位置 e.offsetX
+        c1.onmousemove=function(e){
+            x = e.offsetX;
+            y = e.offsetY;
+        }
+
+//            利用定时器完成循环监听
+        var t = setInterval(function(){
+            ctx.clearRect(0,0,666,666);
+            var pw = parseInt(p1.width/2);
+            var py = parseInt(p1.height/2);
+//            将中心点从图像左上角，改变到神兽中心
+            ctx.drawImage(p1,x-pw,y-py);
+
+        },50)
+
+    }
+
+
+</script>
+</body>
+</html>     

@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>JQuery Ajax tutorial</title>
-        <link rel="stylesheet" href="../css/cofferdonuts.css">
-        <audio controls autoplay loop>
-            <source src="horse.ogg" type="audio/ogg"> 
-            <source src="horse.mp3" type="audio/mpeg">
-            您的浏览器不支持 audio 标签。
-        </audio>
-        <video id="video_1" width="320" height="240" controls autoplay loop>
-            <source src="https://www.ted.com/talks/darria_long_how_to_manage_your_stress_like_an_er_doctor" type="video/https">
-            <source src="movie.ogg" type="video/ogg">
-            您的浏览器不支持 video 标签。
-        </video>
-        <div class="container">
-            <div id="slider">
-                <ul class="slides">
-                    <li class="slide"><img src="../../images/Italy8.jpg"/></li>
-                    <li class="slide"><img src="../../images/Italy1.jpg"/></li>
-                    <li class="slide"><img src="../../images/Italy5.jpg"/></li>
-                    <li class="slide"><img src="../../images/Italy3.png"/></li>
-                    <li class="slide"><img src="../../images/Italy7.jpg"/></li>
-                </ul>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="locations.html">LOCATIONS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Ajax tutorial</title>
+    <script src="../../../../jquery.js"></script>
+    <link rel="stylesheet" href="../css/cofferdonuts.css">
+</head>
+
+<body>
+    <audio controls autoplay loop>
+        <source src="horse.ogg" type="audio/ogg"> 
+        <source src="horse.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 标签。
+    </audio>
+    <video id="video_1" width="320" height="240" controls autoplay loop>
+        <source src="https://www.ted.com/talks/darria_long_how_to_manage_your_stress_like_an_er_doctor" type="video/https">
+        <source src="movie.ogg" type="video/ogg">
+        您的浏览器不支持 video 标签。
+    </video>
+    <div id="air"></div>
+    <div class="container">
+        <div id="slider">
+            <ul class="slides">
+                <li class="slide"><img src="../../images/Italy8.jpg"/></li>
+                <li class="slide"><img src="../../images/Italy1.jpg"/></li>
+                <li class="slide"><img src="../../images/Italy5.jpg"/></li>
+                <li class="slide"><img src="../../images/Italy3.png"/></li>
+                <li class="slide"><img src="../../images/Italy7.jpg"/></li>
             </ul>
-        </nav>
-    </head>
-    <body>
-        <header>
-            <h1>Coffee Booking Now!</h1>
-        </header>
-        <section>
-            <p class="order"> 
-                <h2>Add a Coffee Order</h2>
-                <ul id="orders"></ul>
-                <form>
-                    name: <input type="text" id="username" placeholder="guest name" autofocus/>
-                </form>
-            </p>
-            <p>
-                <form aria-autocomplete="false">
-                    drink: <input type="text" id="drink" placeholder="wonderful drink" required/>
-                    <input id="add-orders" type="submit" />
-                </form>
-            </p>
-            <!-- <button id="add-orders" type="button">Add!</button> -->
-        </section>
-        
-        <h3 id="test">Menu: <input type="search" name="searchitem" /></h3>
-        <h3>
-            <input list="browsers" />
-                <datalist id="browsers">
-                    <option value="">
-                    <option value="FishC">
-                    <option value="fishc">
-                    <option value="鱼兮">
-                    <option value="小甲鱼">
-                </datalist>
-        </h3>
-        <h3>Customer Research: 
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li id="sun"><a href="index.html">HOME</a></li>
+            <li><a href="locations.html">LOCATIONS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Coffee Booking Now!</h1>
+    </header>
+    <section>
+        <p class="order"> 
+            <h2>Add a Coffee Order</h2>
+            <ul id="orders"></ul>
             <form>
-                <input type="email" name="email" placeholder="xxx@fishc.com" />
-                <br />
-                <input type="tel" name="usrtel" placeholder="666.666" />
-                <br />
-                <input type="url" name="homepage" placeholder="fishc.com" />
-                <input type="submit" />
-              </form>
-        </h3>
-        <video id="video_2" width="1000" height="240" controls autoplay loop>
-            <source src="https://www.ted.com/talks/darria_long_how_to_manage_your_stress_like_an_er_doctor" type="video/https">
-            <source src="movie.ogg" type="video/ogg">
-            您的浏览器不支持 video 标签。
-        </video>
-        <script src="../../../../jquery.js"></script>
-        <script src="../javascript/CoffeeOrder.js"></script>
-        <script src="../javascript/SlidingPic.js"></script>
-        <script src="../javascript/coffee_canvas.js"></script>
-    </body>
+                name: <input type="text" id="username" placeholder="guest name" autofocus/>
+            </form>
+        </p>
+        <p>
+            <form aria-autocomplete="false">
+                drink: <input type="text" id="drink" placeholder="wonderful drink" required/>
+                <input id="add-orders" type="submit" />
+            </form>
+        </p>
+        <!-- <button id="add-orders" type="button">Add!</button> -->
+    </section>
+    
+    <h3 id="test">Menu: <input type="search" name="searchitem" /></h3>
+    <h3>
+        <input list="browsers" />
+            <datalist id="browsers">
+                <option value="">
+                <option value="FishC">
+                <option value="fishc">
+                <option value="鱼兮">
+                <option value="小甲鱼">
+            </datalist>
+    </h3>
+    <h3>Customer Research: 
+        <form>
+            <input type="email" name="email" placeholder="xxx@fishc.com" />
+            <br />
+            <input type="tel" name="usrtel" placeholder="666.666" />
+            <br />
+            <input type="url" name="homepage" placeholder="fishc.com" />
+            <input type="submit" />
+            </form>
+    </h3>
+    <video id="video_2" width="1000" height="240" controls autoplay loop>
+        <source src="https://www.ted.com/talks/darria_long_how_to_manage_your_stress_like_an_er_doctor" type="video/https">
+        <source src="movie.ogg" type="video/ogg">
+        您的浏览器不支持 video 标签。
+    </video>
+    <script src="../javascript/beans.js"></script>
+    <script src="../javascript/CoffeeOrder.js"></script>
+    <script src="../javascript/SlidingPic.js"></script>
+    <script src="../javascript/coffee_canvas.js"></script>
+</body>
 </html>
