@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="KeyWords" content="关键字" />
+		<meta name="description" content="说明描述" />
+		<title>402491185-厚德载物-定时器作业</title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			#map,#sele{
+				position:relative;
+				width:880px;
+				height:660px;
+				font-size:0px;
+				margin:20px auto;
+				border:1px solid black;
+			}
+			#sele{
+				height:30px;
+				border: none;
+				margin-top:-15px;
+			}
+			#sele span,#sele i{
+				height:30px;
+				font-weight:bold;
+				line-height:30px;
+				font-size:20px;
+				font-style:normal;
+				text-align:center;
+				padding:0px 0px 0px 10px;
+			}
+			#sele input{
+				display: inline-block;
+				font-weight:bold;
+				height:30px;
+				font-size:18px;
+				margin:0px 0px 0px 20px;
+			}
+			#sele i{padding-left:0px;color:pink;}
+			#sele span:last-of-type{color:yellow;}
+			#sele input[type=checkbox]{
+				position: relative;
+				top:8px;
+				left:-5px;
+			}
+			#sele select{
+				color:blue;
+				font-weight:bold;
+				height:30px;
+				font-size:18px;
+			}
+			#map::after{
+				content:'';
+				display:block;
+				clear:both;
+				overflow:hidden;
+			}
+			#map div{
+				float:left;
+				width:20px;
+				height:20px;
+				font-size:0px;
+				border:1px solid #dddddd;
+				border-radius:50%;
+			}
+		</style>
+		<script src="402491185.js" type="text/javascript"></script>
+	</head>
+	<body style="background-color:#3a6ea5;">
+		<div id='map'>
+		</div>
+		<div id="sele">
+			<input type='checkbox' checked="true" />
+			<i>是否开启无限续玩模式</i>
+			<span>请选择游戏的困难程度:</span>
+			<select>
+				<option value='800'>慢速</option>
+				<option value='350'>正常</option>
+				<option value='150'>快速</option>
+				<option value='50'>极速</option>
+			</select>
+			<input type="button" value="开始游戏">
+			<input type="button" value="暂停游戏">
+			<span>当前成绩:&nbsp;0分</span>
+		</div>
+	</body>
+</html>
